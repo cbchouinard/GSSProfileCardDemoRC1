@@ -21,8 +21,8 @@
     </head>
     <body>
 
-<style type=“text/css”> html:not(.gss-ready) { opacity: 50; } </style>
-<noscript> <style type=“text/css”> html:not(.gss-ready) { opacity: 1; } </style> </noscript>
+<style type="text/css"> html:not(.gss-ready) { opacity: 50; } </style>
+<noscript> <style type="text/css"> html:not(.gss-ready) { opacity: 1; } </style> </noscript>
     	<div id="background"></div>
         <div id="profile-card"></div>
         <div id="cover"></div>
@@ -31,11 +31,11 @@
         <button id="follow" class="primary">Follow</button>
         <button id="following">Following</button>
         <button id="followers">Followers</button>
-        <button id="message">Message</button    >
+        <button id="message">Message</button>
 
         <script src="/bower_components/gss/dist/gss.js"></script>
         <script type="text/javascript">
-                GSS.document = new GSS(document);
+                GSS.document = new GSS(document, {"gap": 20, "outer-radius": 20});
           </script>
     </body>
 </html>
