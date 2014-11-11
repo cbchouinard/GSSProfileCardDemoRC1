@@ -1,0 +1,59 @@
+
+/* vars */
+[gap] == 20 !require;
+[flex-gap] >= [gap] * 2 !require;
+[radius] == [outer-radius] / 2 !require;
+[outer-radius] == 20;
+
+#profile-card {
+	&[width] == ::window[width] - 480;
+	&[height] == ::window[height] - 480;
+	center-x: == ::window[center-x];
+	center-y: == ::window[center-y];
+	border-radius: == [outer-radius];
+}
+
+#cover {
+	border-radius: == [outer-radius] / 2;
+}
+
+#avatar {
+	height: == 160 !require;
+	width: == &[height];
+	border-radius: == &[height] / 2;
+	center-x: == #cover[center-x];
+}
+
+#name {
+	height: == &[intrinsic-height] !require;
+	width: == &[intrinsic-width] !require;
+	center-x: == #cover[center-x];
+}
+
+button {
+	width: == &[intrinsic-width] !require;
+	height: == &[intrinsic-height] !require;
+	padding: == [gap];
+	padding-top: == [gap] / 2;
+	padding-bottom: == [gap] / 2;
+	border-radius: == [radius];
+}
+
+#follow[center-x] == #profile-card[center-x];
+
+@h |-(#message)~-~(#follow)~-~(#following)-(#followers)-| 
+		in(#profile-card) 
+		chain-top
+		gap([gap])
+		!strong;
+
+@v |-(#avatar)-(#name)-| in(#cover)
+		gap([gap])
+		outer-gap([felx-gap])
+		!strong;
+
+@v |-(#cover)-(#follow)-|
+		in(#profile-card) 
+		gap([gap]);
+
+@h |-(#cover)-| in(#profile-card) gap([gap]); 
