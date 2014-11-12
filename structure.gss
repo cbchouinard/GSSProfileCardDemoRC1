@@ -37,36 +37,21 @@ button {
 #avatar[center-x] == #name[center-x] == #cover[center-x];
 #follow[center-x] == #profile-card[center-x];
 
-@if #profile-card[width] >= #profile-card[height] {
-	@h |-(#message)~-~(#follow)~-~(#following)-(#followers)-| 
+@h |-(#message)~-~(#follow)~-~(#following)-(#followers)-| 
 		in(#profile-card) 
 		gap([gap]) !strong
 		{
 			&[top] == &:next[top];
 		};
 
-	@v |-(#avatar)-(#name)-| in(#cover)
-			gap([gap])
-			outer-gap([felx-gap])
-			!strong;
+@v |-(#avatar)-(#name)-| in(#cover)
+		gap([gap])
+		outer-gap([felx-gap])
+		!strong;
 
-	@v |-(#cover)-(#follow)-|
-			in(#profile-card) 
-			gap([gap]);
+@v |-(#cover)-(#follow)-|
+		in(#profile-card) 
+		gap([gap]);
 
-	@h |-(#cover)-| in(#profile-card) gap([gap]); 
-}
-@else {
-	@v |-(#avatar)-(#name)-(#follow)-(#message)-(#following)-(#followers)-| 
-	    in(#cover)
-	    gap([gap])
-	    outer-gap([flex-gap])
-	    {
-	    	&[center-x] == #profile-car[center-x];
-	    };    
-
-	 @h |-[#cover]-| in(#profile-card) gap([gap]);
-	 @v |-[#cover]-| in(#profile-card) gap([gap]);
-}
-
+@h |-(#cover)-| in(#profile-card) gap([gap]); 
 
