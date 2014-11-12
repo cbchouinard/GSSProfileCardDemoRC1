@@ -7,7 +7,6 @@
 
 
 #profile-card {
-	
 	width: == ::window[width] - 480;
 	height: == ::window[height] - 480;
 	center: == ::window[center];
@@ -23,7 +22,6 @@
 	border-radius: == &[height] / 2;
 }
 
-
 #name {
 	size: == &[intrinsic-size];
 }
@@ -35,7 +33,6 @@ button {
 	padding-bottom: == [gap] / 2;
 	border-radius: == [radius];
 }
-
 
 #avatar[center-x] == #name[center-x] == #cover[center-x];
 #follow[center-x] == #profile-card[center-x];
