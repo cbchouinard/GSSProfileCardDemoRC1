@@ -5,17 +5,17 @@
  [outer-radius] == [radius] * 2 !required;
  /* scope-as-window for tests */
 
- ::scope[left] == 0;
- ::scope[top] == 0;
- ::scope[width] == ::scope[intrinsic-width] !require;
- ::scope[height] == ::scope[intrinsic-height] !require;
+ ::window[left] == 0;
+ ::window[top] == 0;
+ ::window[width] == ::window[intrinsic-width] !require;
+ ::window[height] == ::window[intrinsic-height] !require;
 
  /* elements */
  #profile-card {      
-  width: == ::scope[intrinsic-width] - 480;            
-  height: == ::scope[intrinsic-height] - 350;
-  center-x: == ::scope[center-x];
-  center-y: == ::scope[center-y];        
+  width: == ::window[width] - 480;            
+  height: == ::window[height] - 350;
+  center-x: == ::window[center-x];
+  center-y: == ::window[center-y];        
   border-radius: == [outer-radius];
 }
 
