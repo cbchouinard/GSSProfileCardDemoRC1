@@ -48,7 +48,7 @@ button {
 
   @v |-(#avatar)-(#name)-| in(#cover)
       gap([gap])
-      outer-gap([felx-gap])
+      outer-gap([flex-gap])
       !strong;
 
   @v |-(#cover)-(#follow)-|
