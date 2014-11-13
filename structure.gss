@@ -67,5 +67,5 @@ button {
   }
 
   @h |-10-(#cover)-10-| in(#profile-card);
-  @v |-10-(#cover)-10-| in(#profile-card);
+  @v |-10-(#cover)-10-| in(#profile-card) !require;
 }
